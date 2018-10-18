@@ -1,0 +1,25 @@
+GET        /                       controllers.HomeController.index
+
+->         /v1/posts               v1.post.PostRouter
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
+
+
+
+# rest demo samples
+
+GET     /ping       controllers.HomeController.ping
+
+POST    /postEmp/:name/:company    controllers.EmployeeController.postEmployee(name: String, company: String)
+
+POST    /saveEmp    controllers.EmployeeController.saveEmp
+
+GET     /getEmp/:id     controllers.EmployeeController.getEmployee(id:Long)
+
+PUT     /putEmployee    controllers.EmployeeController.putEmployee
+
+GET     /getEmployees   controllers.EmployeeController.getEmployees
+
+DELETE  /deleteEmp/:id  controllers.EmployeeController.deleteEmployee(id:Long)
+
